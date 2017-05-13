@@ -11,7 +11,7 @@ const requireAuth = expressJwt({
  */
 router.get('/safe', requireAuth, (req, res, next) => {
   res.send('Resource which can be accessed only with token');
-})
+});
 
 /**
  * Unsecured resource.
