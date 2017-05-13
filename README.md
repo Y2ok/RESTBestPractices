@@ -11,7 +11,7 @@ Repository with REST architecture style best practice examples
 2) Change DB credentials in knexfile.js;
 3) Execute command - ``knex migrate:latest``;
 4) Start the server - ``npm start``;
-5) Create an account -
+5) Create an account and POST it to localhost:3000/registration via postman or similar -
 ```
 {
 	"name": "Name",
@@ -20,10 +20,6 @@ Repository with REST architecture style best practice examples
 	"password": "SuperSecretPassword"
 }
 ```
-and POST it to localhost:3000/registration via postman or similar;
-
 6) Do a POST to localhost:3000/login with the same email and password and retrieve token;
-
 7) Try to access urls localhost:3000/users/safe and localhost:3000/users/unsafe without passing ``Authorization`` header;
-
 8) Try to access urls localhost:3000/users/safe and localhost:3000/users/unsafe with passing ``Authorization`` header (with token that was retrieved using login).
