@@ -36,3 +36,10 @@ Repository with REST architecture style best practice examples
 	"_csrf": "token from localhost:3000/token"
 }
 ```
+
+# Anti-Farming
+1) Install all dependencies - ``npm install``;
+2) Change DB credentials in knexfile.js;
+3) Execute command - ``knex migrate:latest``;
+4) Start the server - ``npm start``;
+5) Try to make GET requests to localhost:3000/safe , you should see counter increasing, when it will reach 15, you will see rejection message. Only last minute requests will be taken into an account.
