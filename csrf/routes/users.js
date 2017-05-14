@@ -16,7 +16,7 @@ router.get('/token', csrfProtection, (req, res, next) => {
 /**
  * Secured resource.
  */
-router.post('/safe', parseForm, csrfProtection , (req, res, next) => {
+router.post('/safe', parseForm, csrfProtection, (req, res, next) => {
   res.send('Resource which can be accessed only with CSRF token');
 });
 

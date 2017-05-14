@@ -137,7 +137,7 @@ function registerUser(req, res) {
             name: req.body.name,
             surname: req.body.surname,
             email: req.body.email,
-            visibleId: 'verySecretVisibleID',
+            visibleId: 'verySecretVisibleID' + req.body.name + req.body.surname,
             password: hashedPass
         };
 
