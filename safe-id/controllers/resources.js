@@ -60,7 +60,7 @@ function insertUser(req, res, next) {
             name: req.body.name,
             surname: req.body.surname,
             email: req.body.email,
-            visibleId: 'verySecretVisibleID',
+            visibleId: 'verySecretVisibleID' + req.body.name + req.body.surname,
             password: req.body.password,
         }
     ).then(data => {
@@ -79,7 +79,7 @@ function getUser(req, res, next) {
             if (data === null) {
                 res.status(404).send('not found');
             }
-            if (data.length > 0 ) {
+            if (data) {
                 res.status(200).send('user retrieved');
             } else {
                 res.status(404).send('no data');
