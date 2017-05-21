@@ -36,5 +36,5 @@ function insert(log) {
  */
 function getCount(ip) {
 	let date = new Date(new Date().getTime()-60000);
-	return Logs().count('caller').where('caller', ip).andWhere('date-time', '>', date).andWhere('status', '>=', 400).orWhere('status', '<', 500);
+	return Logs().count('caller').where('caller', ip).andWhere('date-time', '>', date).andWhere('status', '>=', 400);
 }
